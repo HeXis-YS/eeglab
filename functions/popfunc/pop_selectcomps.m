@@ -199,7 +199,7 @@ for ri = compnum
          end
 		button = uicontrol(gcf, 'Style', 'pushbutton', 'Units','Normalized', 'Position',...
                            [X Y+sizewy sizewx sizewy*0.18].*s+q, 'tag', ['comp' num2str(ri)]);
-        command = sprintf('pop_prop( EEG, 0, %d, gcbo, { ''freqrange'', [1 50] });', ri);
+        command = sprintf('pop_prop_extended( EEG, 0, %d, gcbo, { ''freqrange'', [1 50] });', ri);
 		set( button, 'callback', command );
 	end
 	set( button, 'backgroundcolor', eval(fastif(EEG.reject.gcompreject(ri), COLREJ,COLACC)), 'string', int2str(ri)); 	
