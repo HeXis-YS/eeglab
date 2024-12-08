@@ -10,7 +10,7 @@ option_saveversion6  = 1 ;  % If set, write files in Matlab v6.5 (fastest and Oc
 option_saveasstruct  = 1 ;  % If set, save the fields of the EEG structure as individual variables in the file (new 2021 default).
 option_parallel      = 0 ;  % If set, use the parallel toolbox when processing multiple datasets (beta)
 % Memory options 
-option_single        = 1 ;  % If set, use single precision number (32-bit instead of 64-bit) in memory.
+option_single        = 0 ;  % If set, use single precision number (32-bit instead of 64-bit) in memory.
 option_memmapdata    = 0 ;  % If set, use memory mapped array under Matlab 7.x. This may slow down some computation (beta).
 option_eegobject     = 0 ;  % If set, use the EEGLAB EEG object instead of the standard EEG structure (beta). 
 % ICA options 
