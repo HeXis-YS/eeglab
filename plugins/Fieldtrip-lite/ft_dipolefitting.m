@@ -433,10 +433,10 @@ if strcmp(cfg.gridsearch, 'yes')
     switch cfg.model
       case 'regional'
         % sum the error over all latencies
-        sourcemodel.error(thisindx,1) = sum(sum(((eye(nchans)-lf*pinv(lf))*Vdata).^2));
+        sourcemodel.error(thisindx,1) = sum(sum((Vdata - lf * (lf \ Vdata)) .^ 2));
       case 'moving'
         % remember the error for each latency independently
-        sourcemodel.error(thisindx,:) = sum(((eye(nchans)-lf*pinv(lf))*Vdata).^2);
+        sourcemodel.error(thisindx,:) = sum((Vdata - lf * (lf \ Vdata)) .^ 2);
       otherwise
         ft_error('unsupported cfg.model');
     end % switch model
