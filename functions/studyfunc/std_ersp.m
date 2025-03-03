@@ -298,7 +298,7 @@ allTrialsTmp   = cell(1,length(g.indices));
 allTrialsTime  = cell(1,length(g.indices));
 allTrialsFreqs = cell(1,length(g.indices));
 eeglab_options;
-usesingle = option_single;
+usesingle = 0;
 
 disp('Computing time/frequency decomposition...');
 parfor k = 1:length(g.indices)
