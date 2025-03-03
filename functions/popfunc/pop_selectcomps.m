@@ -183,10 +183,8 @@ for ri = compnum
 						~= size(EEG.etc.ic_classification.(classifier_name).classifications, 1)
 					warning(['The number of ICs do not match the number of IC classifications. This will result in incorrectly plotted labels. Please rerun ' classifier_name])
 				end
-				[prob, classind] = max(EEG.etc.ic_classification.(classifier_name).classifications(ri, :));
-				t = title(sprintf('%s : %.1f%%', ...
-					EEG.etc.ic_classification.(classifier_name).classes{classind}, ...
-					prob*100));
+				t = title(sprintf('%.1f / %.1f / %.1f', ...
+    				EEG.etc.ic_classification.ICLabel.classifications(ri, 1) * 100, sum(EEG.etc.ic_classification.ICLabel.classifications(ri, 2:6), 2) * 100, EEG.etc.ic_classification.ICLabel.classifications(ri, 7) * 100));
 				set(t, 'Position', get(t, 'Position') .* [1 -1.2 1])
 			end
 		end
