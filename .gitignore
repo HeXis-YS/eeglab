@@ -6,4 +6,6 @@ derivative
 !/plugins/dipfit
 !/plugins/firfilt
 !/plugins/ICLabel
+!/plugins/Fieldtrip-lite
+!/plugins/Fieldtrip-lite/**
 .DS_Store
