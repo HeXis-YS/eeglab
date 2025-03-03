@@ -204,7 +204,7 @@ elseif length(varargin) == 0 && length(EEG) == 1 && strcmpi(g.gui, 'on') % if se
     enable_savenew = 'off';
     value_saveold  = 0;
     value_savenew  = 0;
-    value_owrt   = 0;
+    value_owrt   = 1;
     cb_owrt      = '';
 	userdat = EEG.comments;
     
