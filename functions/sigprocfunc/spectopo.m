@@ -161,7 +161,7 @@ function [eegspecdB,freqs,compeegspecdB,resvar,specstd] = spectopo(data,frames,s
 
 icadefs;
 LOPLOTHZ = 1;  % low  Hz to plot
-FREQFAC  = 1;  % approximate frequencies/Hz (default)
+FREQFAC  = 10;  % approximate frequencies/Hz (default)
 allcolors = { [0 0.7500 0.7500] 
               [1 0 0] 
               [0 0.5000 0] 
